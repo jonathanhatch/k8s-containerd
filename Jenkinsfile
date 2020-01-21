@@ -1,10 +1,11 @@
 Jenkinsfile (Declarative Pipeline)
 pipeline {
-    agent { docker { image 'php' } }
+    agent { docker { image 'ubuntu:latest' } }
     stages {
         stage('build') {
             steps {
-                sh 'php --version'
+                sh 'git clone https://github.com/jonathanhatch/k8s-containerd.git'
+		sh 'echo "yes!"'
             }
         }
     }
