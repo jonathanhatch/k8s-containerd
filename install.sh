@@ -41,3 +41,6 @@ EOF
 sudo apt-get update
 sudo apt-get install -y kubelet kubeadm kubectl
 sudo apt-mark hold kubelet kubeadm kubectl
+
+sleep 10
+sysctl net.bridge.bridge-nf-call-iptables=1
