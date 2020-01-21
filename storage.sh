@@ -1,6 +1,6 @@
 #!/bin/bash
 sudo apt-get update
-sudo apt install nfs-kernel-server
+sudo apt install nfs-kernel-server -y
 sudo mkdir -p /data
 sudo chown nobody:nogroup /data
 sudo chmod 777 /data
