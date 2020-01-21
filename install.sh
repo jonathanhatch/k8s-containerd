@@ -1,4 +1,7 @@
 #!/bin/bash
+swapoff -a 
+sed -i.bak -r 's/(.+ swap .+)/#\1/' /etc/fstab
+
 cat > /etc/modules-load.d/containerd.conf <<EOF
 overlay
 br_netfilter
